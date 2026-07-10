@@ -1,0 +1,17 @@
+{
+  "name": "ai-movie-translation-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Khmer video translation studio powered by Flask, Whisper, neural TTS, and FFmpeg.",
+  "scripts": {
+    "dev": "python subtitle_pipeline.py",
+    "start": "python subtitle_pipeline.py",
+    "build": "python -m py_compile subtitle_pipeline.py",
+    "test": "python -m pytest -q",
+    "typecheck": "python -m py_compile subtitle_pipeline.py"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}

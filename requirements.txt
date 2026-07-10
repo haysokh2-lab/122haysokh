@@ -1,0 +1,23 @@
+# Khmer Video Translator - Subtitle Pipeline Dependencies
+# Install with: pip install -r requirements.txt
+
+flask>=3.0.0
+flask-cors>=4.0.0
+openai-whisper>=20231117
+faster-whisper>=1.0.0
+easyocr>=1.7.0
+opencv-python-headless>=4.8.0
+imageio-ffmpeg>=0.5.1
+av>=12.0.0
+torch>=2.0.0
+numpy>=1.24.0
+Pillow>=10.0.0
+edge-tts>=6.1.0
+pydub>=0.25.1
+argostranslate>=1.9.0
+
+# Optional professional subtitle timing enhancements:
+# pyannote.audio enables speaker diarization when DIARIZATION_ENABLED=1 and a HF token is configured.
+# whisperx enables forced alignment when FORCED_ALIGNMENT_ENABLED=1.
+# pyannote.audio>=3.1.0
+# whisperx>=3.1.0

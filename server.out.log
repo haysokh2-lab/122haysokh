@@ -1,0 +1,359 @@
+2026-07-09 09:02:06 [INFO] SubtitlePipeline: Starting Khmer Video Translator server on 0.0.0.0:5050
+ * Serving Flask app 'subtitle_pipeline'
+ * Debug mode: off
+2026-07-09 09:02:06 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://172.16.31.2:5050
+2026-07-09 09:02:06 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-07-09 09:02:09 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:02:09] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:02:24 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:02:24] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:02:24 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:02:24] "GET / HTTP/1.1" 200 -
+2026-07-09 09:02:37 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:02:37] "GET / HTTP/1.1" 200 -
+2026-07-09 09:02:38 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:02:38] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:02:38 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:02:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-09 09:03:07 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:07] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:03:08 [INFO] SubtitlePipeline: [API] Transcribe request: video_2026-07-03_00-19-14.mp4, source=auto, target=km, ocr=True
+2026-07-09 09:03:08 [INFO] SubtitlePipeline: [Stage 1] Extracting FULL audio from: C:\Users\User\AppData\Local\Temp\khmer_subtitle_pipeline\upload_1783562588138.mp4
+2026-07-09 09:03:08 [INFO] SubtitlePipeline: [Stage 1] Output audio: C:\Users\User\AppData\Local\Temp\khmer_subtitle_pipeline\audio_speech_21001201a3f3456a961f252fcd37b5ea.wav
+2026-07-09 09:03:08 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:08] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:08 [INFO] SubtitlePipeline: [Stage 1] FFmpeg completed in 0.20s
+2026-07-09 09:03:08 [INFO] SubtitlePipeline: [Stage 1] Audio extracted successfully: 6171756 bytes
+2026-07-09 09:03:08 [INFO] SubtitlePipeline: [Stage 2] Transcribing FULL audio with Whisper (lang=auto)
+2026-07-09 09:03:08 [INFO] SubtitlePipeline: [Stage 2] Audio file: C:\Users\User\AppData\Local\Temp\khmer_subtitle_pipeline\audio_speech_21001201a3f3456a961f252fcd37b5ea.wav
+2026-07-09 09:03:09 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:09] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:10 [INFO] SubtitlePipeline: [Whisper] Loading Faster-Whisper model="base", device="cpu", compute_type="int8"
+2026-07-09 09:03:11 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:11] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:11 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-07-09 09:03:12 [INFO] SubtitlePipeline: [Whisper] Model loaded in 1.65s via faster-whisper.
+2026-07-09 09:03:12 [INFO] SubtitlePipeline: [Timing] Whisper loading/cache lookup: 3.60s
+2026-07-09 09:03:12 [INFO] SubtitlePipeline: [Stage 2] Audio duration: 192.86s
+2026-07-09 09:03:12 [INFO] faster_whisper: Processing audio with duration 03:12.865
+2026-07-09 09:03:12 [INFO] faster_whisper: VAD filter removed 01:12.177 of audio
+2026-07-09 09:03:12 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:12] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:13 [INFO] faster_whisper: Detected language 'zh' with probability 1.00
+2026-07-09 09:03:14 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:14] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:15 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:15] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:17 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:17] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:18 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:18] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:20 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:20] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:21 [INFO] faster_whisper: Processing audio with duration 03:12.865
+2026-07-09 09:03:21 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:21] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:22 [INFO] faster_whisper: Detected language 'zh' with probability 1.00
+2026-07-09 09:03:23 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:23] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:24 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:24] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:26 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:26] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:27 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:27] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:29 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:29] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:30 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:30] "GET /api/status?job_id=pipeline_fb42e15955b64f469e76109bd86de954 HTTP/1.1" 200 -
+2026-07-09 09:03:31 [INFO] SubtitlePipeline: [Button 1] Recovered 3 confident speech segment(s) that the fast VAD pass missed.
+2026-07-09 09:03:31 [INFO] SubtitlePipeline: [Stage 2] Whisper completed in 19.61s
+2026-07-09 09:03:31 [INFO] SubtitlePipeline: [Stage 2] Detected language: zh
+2026-07-09 09:03:31 [INFO] SubtitlePipeline: [Stage 2] Number of segments: 92
+2026-07-09 09:03:31 [INFO] SubtitlePipeline: [VAD] webrtcvad not installed. Using energy-based VAD fallback.
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [VAD] Energy VAD detected 1 speech segments
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [Alignment] whisperx is not installed; using Whisper word timestamps.
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [Diarization] No Hugging Face token configured; skipping speaker diarization.
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [Segmentation] Splitting 92 segments by speech pauses...
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [Segmentation] Built 106 phrase/speaker blocks (26 measured boundary slices).
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [Validation] Validating subtitle segmentation for 106 segments...
+2026-07-09 09:03:32 [WARNING] SubtitlePipeline: [Validation] Found 3 segmentation issues:
+2026-07-09 09:03:32 [WARNING] SubtitlePipeline:   Segment 31 overlaps with segment 30 by 0.260s
+2026-07-09 09:03:32 [WARNING] SubtitlePipeline:   Segment 55 overlaps with segment 54 by 1.010s
+2026-07-09 09:03:32 [WARNING] SubtitlePipeline:   Segment 56 overlaps with segment 55 by 1.930s
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [Validation] Auto-fixing segmentation issues...
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [Validation] Fixing overlapping subtitles (3 issues)...
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [Validation] Re-validating after fixes...
+2026-07-09 09:03:32 [WARNING] SubtitlePipeline: [Validation] 3 issues remaining after auto-fix.
+2026-07-09 09:03:32 [WARNING] SubtitlePipeline: [Stage 2] Auto-checked 3 subtitle segmentation issues after transcription.
+2026-07-09 09:03:32 [WARNING] SubtitlePipeline: [Stage 2] Last segment ends at 186.82s but audio is 192.86s. Coverage: 96.9%
+2026-07-09 09:03:32 [INFO] SubtitlePipeline: [Button 1] Grouped 106 clean fragments into 31 complete spoken phrases.
+2026-07-09 09:03:32 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:03:32] "POST /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:04:20 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:20] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:22 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:22] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:23 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:23] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:25 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:25] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:26 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:26] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:28 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:28] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:29 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:29] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:31 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:31] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:33 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:33] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:34 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:34] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:36 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:36] "GET /api/status?job_id=voice_52f514ca4c074e89816517c3afc2a74f HTTP/1.1" 200 -
+2026-07-09 09:04:36 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:36] "POST /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:04:36 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:36] "[35m[1mGET /api/dubbing/audio/dubbing_94fa897bf4ba430ebeae85c7bd9be3c3.wav HTTP/1.1[0m" 206 -
+2026-07-09 09:04:45 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-09 09:04:54 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:54] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:04:56 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:56] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:04:57 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:57] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:04:59 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:04:59] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:05:00 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:05:00] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:05:02 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:05:02] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:05:03 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:05:03] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:05:05 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:05:05] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:05:06 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:05:06] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:05:08 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:05:08] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:05:09 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:05:09] "GET /api/status?job_id=voice_a84e8014149a467da90f6697af455e32 HTTP/1.1" 200 -
+2026-07-09 09:05:10 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:05:10] "POST /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:05:10 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:05:10] "[35m[1mGET /api/dubbing/audio/dubbing_8976cc5802df46ca92743604db99307a.wav HTTP/1.1[0m" 206 -
+2026-07-09 09:08:25 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:08:25] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:08:25 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:08:25] "GET / HTTP/1.1" 200 -
+2026-07-09 09:08:38 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:08:38] "GET / HTTP/1.1" 200 -
+2026-07-09 09:08:38 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:08:38] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:08:57 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:08:57] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:08:57 [INFO] SubtitlePipeline: [API] Transcribe request: video_2026-07-03_00-19-14.mp4, source=auto, target=km, ocr=True
+2026-07-09 09:08:57 [INFO] SubtitlePipeline: [Pipeline] Reusing cached speech subtitles.
+2026-07-09 09:08:57 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:08:57] "POST /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:08:57 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:08:57] "GET /api/status?job_id=pipeline_c5eef66f28f94cc8b2560e2ff3b26966 HTTP/1.1" 200 -
+2026-07-09 09:09:09 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:09:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-09 09:10:51 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:10:51] "GET / HTTP/1.1" 200 -
+2026-07-09 09:11:09 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:11:09] "GET / HTTP/1.1" 200 -
+2026-07-09 09:11:09 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:11:09] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:14:54 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:14:54] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:18:00 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:00] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:18:00 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:00] "OPTIONS /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:18:01 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:01] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:01 [INFO] SubtitlePipeline: [API] Transcribe request: video_2026-07-01_18-01-58.mp4, source=auto, target=km, ocr=True
+2026-07-09 09:18:01 [INFO] SubtitlePipeline: [Stage 1] Extracting FULL audio from: C:\Users\User\AppData\Local\Temp\khmer_subtitle_pipeline\upload_1783563481029.mp4
+2026-07-09 09:18:01 [INFO] SubtitlePipeline: [Stage 1] Output audio: C:\Users\User\AppData\Local\Temp\khmer_subtitle_pipeline\audio_speech_77c2771032174848869dd450fa027a7d.wav
+2026-07-09 09:18:01 [INFO] SubtitlePipeline: [Stage 1] FFmpeg completed in 0.12s
+2026-07-09 09:18:01 [INFO] SubtitlePipeline: [Stage 1] Audio extracted successfully: 6428068 bytes
+2026-07-09 09:18:01 [INFO] SubtitlePipeline: [Stage 2] Transcribing FULL audio with Whisper (lang=auto)
+2026-07-09 09:18:01 [INFO] SubtitlePipeline: [Stage 2] Audio file: C:\Users\User\AppData\Local\Temp\khmer_subtitle_pipeline\audio_speech_77c2771032174848869dd450fa027a7d.wav
+2026-07-09 09:18:01 [INFO] SubtitlePipeline: [Whisper] Loading Faster-Whisper model="base", device="cpu", compute_type="int8"
+2026-07-09 09:18:01 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-base/revision/main "HTTP/1.1 200 OK"
+2026-07-09 09:18:02 [INFO] SubtitlePipeline: [Whisper] Model loaded in 0.72s via faster-whisper.
+2026-07-09 09:18:02 [INFO] SubtitlePipeline: [Timing] Whisper loading/cache lookup: 0.72s
+2026-07-09 09:18:02 [INFO] SubtitlePipeline: [Stage 2] Audio duration: 200.87s
+2026-07-09 09:18:02 [INFO] faster_whisper: Processing audio with duration 03:20.875
+2026-07-09 09:18:02 [INFO] faster_whisper: VAD filter removed 01:50.139 of audio
+2026-07-09 09:18:02 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:02] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:02 [INFO] faster_whisper: Detected language 'zh' with probability 1.00
+2026-07-09 09:18:04 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:04] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:05 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:05] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:07 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:07] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:08 [INFO] faster_whisper: Processing audio with duration 03:20.875
+2026-07-09 09:18:08 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:08] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:08 [INFO] faster_whisper: Detected language 'zh' with probability 1.00
+2026-07-09 09:18:10 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:10] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:11 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:11] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:13 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:13] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:14 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:14] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:16 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:16] "GET /api/status?job_id=pipeline_7ae8ffbc07a8462280b9abe37b90d2f0 HTTP/1.1" 200 -
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Button 1] Recovered 2 confident speech segment(s) that the fast VAD pass missed.
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Stage 2] Whisper completed in 14.94s
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Stage 2] Detected language: zh
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Stage 2] Number of segments: 55
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [VAD] webrtcvad not installed. Using energy-based VAD fallback.
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [VAD] Energy VAD detected 2 speech segments
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Alignment] whisperx is not installed; using Whisper word timestamps.
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Diarization] No Hugging Face token configured; skipping speaker diarization.
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Segmentation] Splitting 55 segments by speech pauses...
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Segmentation] Built 99 phrase/speaker blocks (74 measured boundary slices).
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Validation] Validating subtitle segmentation for 99 segments...
+2026-07-09 09:18:17 [INFO] SubtitlePipeline: [Button 1] Grouped 99 clean fragments into 56 complete spoken phrases.
+2026-07-09 09:18:17 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:17] "POST /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:18:59 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:18:59] "OPTIONS /api/translate-subtitles HTTP/1.1" 200 -
+2026-07-09 09:18:59 [INFO] SubtitlePipeline: [Stage 3] Translating 56 dubbing scenes from 56 subtitles: zh-CN -> km
+2026-07-09 09:18:59 [INFO] SubtitlePipeline: [Stage 3] Using up to 4 translation workers
+2026-07-09 09:19:00 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:00] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:01 [INFO] argostranslate.utils: ('get_installed_languages',)
+2026-07-09 09:19:01 [INFO] argostranslate.utils: ('get_installed_languages',)
+2026-07-09 09:19:01 [INFO] argostranslate.utils: ('get_installed_languages',)
+2026-07-09 09:19:01 [INFO] argostranslate.utils: ('get_installed_languages',)
+2026-07-09 09:19:01 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:01 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:01 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:01 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:01 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:01] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:02 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:02 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:02 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:02 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:03 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:03] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:03 [INFO] SubtitlePipeline: [Stage 3] Translated 5/56 scenes
+2026-07-09 09:19:03 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:03 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:03 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:03 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:04 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:04 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:04 [INFO] SubtitlePipeline: [Stage 3] Translated 10/56 scenes
+2026-07-09 09:19:04 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:04 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:04 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:04] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:05 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:05 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:05 [INFO] SubtitlePipeline: [Stage 3] Translated 15/56 scenes
+2026-07-09 09:19:05 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:05 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:06 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:06 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:06 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:06] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:06 [WARNING] SubtitlePipeline: [Stage 3] MyMemory attempt 1/3 returned status=200 without a valid km translation.
+2026-07-09 09:19:06 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:07 [INFO] SubtitlePipeline: [Stage 3] Translated 20/56 scenes
+2026-07-09 09:19:07 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:07 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:07 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:07 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:07] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:08 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:08 [WARNING] SubtitlePipeline: [Stage 3] MyMemory attempt 2/3 returned status=200 without a valid km translation.
+2026-07-09 09:19:08 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:08 [WARNING] SubtitlePipeline: [Stage 3] MyMemory attempt 1/3 returned status=200 without a valid km translation.
+2026-07-09 09:19:09 [INFO] SubtitlePipeline: [Stage 3] Translated 25/56 scenes
+2026-07-09 09:19:09 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:09 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:09] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:09 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:10 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:10 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:10 [WARNING] SubtitlePipeline: [Stage 3] MyMemory attempt 2/3 returned status=200 without a valid km translation.
+2026-07-09 09:19:10 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:10] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:10 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:11 [WARNING] SubtitlePipeline: [Stage 3] MyMemory attempt 3/3 returned status=200 without a valid km translation.
+2026-07-09 09:19:11 [WARNING] SubtitlePipeline: [Stage 3] MyMemory exhausted for zh-CN->km (last status=200); trying Google fallback.
+2026-07-09 09:19:11 [INFO] SubtitlePipeline: [Stage 3] Translated 30/56 scenes
+2026-07-09 09:19:11 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:11 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:11 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:12 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:12] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:12 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:12 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:13 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:13 [INFO] SubtitlePipeline: [Stage 3] Translated 35/56 scenes
+2026-07-09 09:19:13 [WARNING] SubtitlePipeline: [Stage 3] MyMemory attempt 3/3 returned status=200 without a valid km translation.
+2026-07-09 09:19:13 [WARNING] SubtitlePipeline: [Stage 3] MyMemory exhausted for zh-CN->km (last status=200); trying Google fallback.
+2026-07-09 09:19:13 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:13 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:13 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:13] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:13 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:14 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:14 [INFO] SubtitlePipeline: [Stage 3] Translated 40/56 scenes
+2026-07-09 09:19:14 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:14 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:15 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:15 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:15 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:15] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:16 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:16 [INFO] SubtitlePipeline: [Stage 3] Translated 45/56 scenes
+2026-07-09 09:19:16 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:16 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:16 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:16 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:16] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:16 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:17 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:17 [INFO] SubtitlePipeline: [Stage 3] Translated 50/56 scenes
+2026-07-09 09:19:17 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:18 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:18] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:18 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:18 [WARNING] SubtitlePipeline: [Stage 3] Missing local Argos package for zh->km; keeping source text for this segment.
+2026-07-09 09:19:19 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:19] "GET /api/status?job_id=translation_baeccc22d7e64e9c95d2e73b1944e3fe HTTP/1.1" 200 -
+2026-07-09 09:19:19 [INFO] SubtitlePipeline: [Stage 3] Translated 55/56 scenes
+2026-07-09 09:19:19 [INFO] SubtitlePipeline: [Stage 3] Translated 56/56 scenes
+2026-07-09 09:19:19 [INFO] SubtitlePipeline: [Stage 3] Scene-based translation complete. 56 individual subtitle segments preserved.
+2026-07-09 09:19:20 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:19:20] "POST /api/translate-subtitles HTTP/1.1" 200 -
+2026-07-09 09:24:18 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:24:18] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:26:05 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:26:05] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:26:05 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:26:05] "OPTIONS /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:26:05 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:26:05] "GET /api/status?job_id=pipeline_34f310f22d35486291192a9a9acf59aa HTTP/1.1" 200 -
+2026-07-09 09:26:06 [INFO] SubtitlePipeline: [API] Transcribe request: video_2026-07-01_18-01-58.mp4, source=auto, target=km, ocr=True
+2026-07-09 09:26:06 [INFO] SubtitlePipeline: [Pipeline] Reusing cached speech subtitles.
+2026-07-09 09:26:06 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:26:06] "POST /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:26:13 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:26:13] "OPTIONS /api/translate-subtitles HTTP/1.1" 200 -
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translating 56 dubbing scenes from 56 subtitles: zh-CN -> km
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Using up to 4 translation workers
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 5/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 10/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 15/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 20/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 25/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 30/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 35/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 40/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 45/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 50/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 55/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Translated 56/56 scenes
+2026-07-09 09:26:13 [INFO] SubtitlePipeline: [Stage 3] Scene-based translation complete. 56 individual subtitle segments preserved.
+2026-07-09 09:26:13 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:26:13] "POST /api/translate-subtitles HTTP/1.1" 200 -
+2026-07-09 09:27:24 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:24] "OPTIONS /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:27:24 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:24] "GET /api/status?job_id=voice_cbc597488da64c1ab4f477a101366e65 HTTP/1.1" 200 -
+2026-07-09 09:27:25 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:25] "GET /api/status?job_id=voice_cbc597488da64c1ab4f477a101366e65 HTTP/1.1" 200 -
+2026-07-09 09:27:27 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:27] "GET /api/status?job_id=voice_cbc597488da64c1ab4f477a101366e65 HTTP/1.1" 200 -
+2026-07-09 09:27:28 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:28] "GET /api/status?job_id=voice_cbc597488da64c1ab4f477a101366e65 HTTP/1.1" 200 -
+2026-07-09 09:27:30 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:30] "GET /api/status?job_id=voice_cbc597488da64c1ab4f477a101366e65 HTTP/1.1" 200 -
+2026-07-09 09:27:31 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:31] "GET /api/status?job_id=voice_cbc597488da64c1ab4f477a101366e65 HTTP/1.1" 200 -
+2026-07-09 09:27:33 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:33] "GET /api/status?job_id=voice_cbc597488da64c1ab4f477a101366e65 HTTP/1.1" 200 -
+2026-07-09 09:27:34 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:34] "GET /api/status?job_id=voice_cbc597488da64c1ab4f477a101366e65 HTTP/1.1" 200 -
+2026-07-09 09:27:36 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:36] "GET /api/status?job_id=voice_cbc597488da64c1ab4f477a101366e65 HTTP/1.1" 200 -
+2026-07-09 09:27:36 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:36] "POST /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:27:36 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:36] "[35m[1mGET /api/dubbing/audio/dubbing_536f5fcbc09b459cb67d2cd2ef5d3227.wav HTTP/1.1[0m" 206 -
+2026-07-09 09:27:39 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:39] "OPTIONS /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:27:39 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:39] "GET /api/status?job_id=voice_ca7b8fcb37c2464ba63b91c088120777 HTTP/1.1" 200 -
+2026-07-09 09:27:41 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:41] "GET /api/status?job_id=voice_ca7b8fcb37c2464ba63b91c088120777 HTTP/1.1" 200 -
+2026-07-09 09:27:41 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:41] "POST /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:27:41 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:41] "[35m[1mGET /api/dubbing/audio/dubbing_fed0740b3128472bb28dfdb4d4fe86a7.wav HTTP/1.1[0m" 206 -
+2026-07-09 09:27:58 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:58] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:27:58 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:58] "OPTIONS /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:27:58 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:58] "GET /api/status?job_id=pipeline_183f89454f7642ac95514aa879ea4547 HTTP/1.1" 200 -
+2026-07-09 09:27:58 [INFO] SubtitlePipeline: [API] Transcribe request: video_2026-07-01_18-01-58.mp4, source=auto, target=km, ocr=True
+2026-07-09 09:27:58 [INFO] SubtitlePipeline: [Pipeline] Reusing cached speech subtitles.
+2026-07-09 09:27:59 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:27:59] "POST /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:28:02 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:02] "OPTIONS /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:28:03 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:03] "GET /api/status?job_id=voice_279afc001c694b29a6f9d15cbcac6053 HTTP/1.1" 200 -
+2026-07-09 09:28:04 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:04] "GET /api/status?job_id=voice_279afc001c694b29a6f9d15cbcac6053 HTTP/1.1" 200 -
+2026-07-09 09:28:06 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:06] "GET /api/status?job_id=voice_279afc001c694b29a6f9d15cbcac6053 HTTP/1.1" 200 -
+2026-07-09 09:28:07 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:07] "GET /api/status?job_id=voice_279afc001c694b29a6f9d15cbcac6053 HTTP/1.1" 200 -
+2026-07-09 09:28:09 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:09] "GET /api/status?job_id=voice_279afc001c694b29a6f9d15cbcac6053 HTTP/1.1" 200 -
+2026-07-09 09:28:10 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:10] "GET /api/status?job_id=voice_279afc001c694b29a6f9d15cbcac6053 HTTP/1.1" 200 -
+2026-07-09 09:28:12 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:12] "GET /api/status?job_id=voice_279afc001c694b29a6f9d15cbcac6053 HTTP/1.1" 200 -
+2026-07-09 09:28:13 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:13] "POST /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:28:13 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:13] "[35m[1mGET /api/dubbing/audio/dubbing_df18ac5ad9a142ea92482d0d6f839dd3.wav HTTP/1.1[0m" 206 -
+2026-07-09 09:28:50 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:50] "OPTIONS /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:28:50 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:50] "GET /api/status?job_id=voice_770385fc89f14c6f9cb4189d22a3dc37 HTTP/1.1" 200 -
+2026-07-09 09:28:52 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:52] "GET /api/status?job_id=voice_770385fc89f14c6f9cb4189d22a3dc37 HTTP/1.1" 200 -
+2026-07-09 09:28:53 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:53] "GET /api/status?job_id=voice_770385fc89f14c6f9cb4189d22a3dc37 HTTP/1.1" 200 -
+2026-07-09 09:28:55 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:55] "GET /api/status?job_id=voice_770385fc89f14c6f9cb4189d22a3dc37 HTTP/1.1" 200 -
+2026-07-09 09:28:56 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:56] "GET /api/status?job_id=voice_770385fc89f14c6f9cb4189d22a3dc37 HTTP/1.1" 200 -
+2026-07-09 09:28:58 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:58] "GET /api/status?job_id=voice_770385fc89f14c6f9cb4189d22a3dc37 HTTP/1.1" 200 -
+2026-07-09 09:28:59 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:28:59] "GET /api/status?job_id=voice_770385fc89f14c6f9cb4189d22a3dc37 HTTP/1.1" 200 -
+2026-07-09 09:29:01 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:29:01] "GET /api/status?job_id=voice_770385fc89f14c6f9cb4189d22a3dc37 HTTP/1.1" 200 -
+2026-07-09 09:29:02 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:29:02] "POST /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:29:02 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:29:02] "[35m[1mGET /api/dubbing/audio/dubbing_b95f2a1e3c64433392f1bf10db182d33.wav HTTP/1.1[0m" 206 -
+2026-07-09 09:29:04 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:29:04] "OPTIONS /api/translate-subtitles HTTP/1.1" 200 -
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translating 56 dubbing scenes from 56 subtitles: zh-CN -> km
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Using up to 4 translation workers
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 5/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 10/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 15/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 20/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 25/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 30/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 35/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 40/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 45/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 50/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 55/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Translated 56/56 scenes
+2026-07-09 09:29:04 [INFO] SubtitlePipeline: [Stage 3] Scene-based translation complete. 56 individual subtitle segments preserved.
+2026-07-09 09:29:05 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:29:05] "POST /api/translate-subtitles HTTP/1.1" 200 -
+2026-07-09 09:33:13 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:33:13] "GET /api/health HTTP/1.1" 200 -
+2026-07-09 09:33:13 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:33:13] "OPTIONS /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:33:14 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:33:14] "GET /api/status?job_id=pipeline_4847d4c6bfb948c4bae6df009d12c0d6 HTTP/1.1" 200 -
+2026-07-09 09:33:14 [INFO] SubtitlePipeline: [API] Transcribe request: video_2026-07-01_18-01-58.mp4, source=auto, target=km, ocr=True
+2026-07-09 09:33:14 [INFO] SubtitlePipeline: [Pipeline] Reusing cached speech subtitles.
+2026-07-09 09:33:14 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:33:14] "POST /api/transcribe HTTP/1.1" 200 -
+2026-07-09 09:33:59 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:33:59] "OPTIONS /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:33:59 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:33:59] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:00 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:00] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:02 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:02] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:03 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:03] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:05 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:05] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:06 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:06] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:08 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:08] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:09 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:09] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:11 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:11] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:12 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:12] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:14 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:14] "GET /api/status?job_id=voice_e1a475d7f2924fc9a0620f0bd94230a7 HTTP/1.1" 200 -
+2026-07-09 09:34:15 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:15] "POST /api/dubbing HTTP/1.1" 200 -
+2026-07-09 09:34:15 [INFO] werkzeug: 127.0.0.1 - - [09/Jul/2026 09:34:15] "[35m[1mGET /api/dubbing/audio/dubbing_8fcf496a29d74b8ca1abae540e022146.wav HTTP/1.1[0m" 206 -
